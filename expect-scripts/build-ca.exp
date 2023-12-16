@@ -1,0 +1,13 @@
+#!/usr/bin/expect
+
+set timeout 5
+log_user 0
+
+spawn ./easyrsa build-ca
+expect "New CA Key Passphrase"
+send -- "$env(CA_PASSPHRASE)\r"
+expect "New CA Key Passphrase"
+send -- "$env(CA_PASSPHRASE)\r"
+expect "Common Name (eg: your user, host, or server name)"
+send -- "$env(OVPN_SERVERNAME)\r"
+expect eof

@@ -1,0 +1,11 @@
+#!/usr/bin/expect
+
+set timeout 5
+log_user 0
+
+spawn ./easyrsa sign-req server $env(OVPN_SERVERNAME)
+expect "Confirm request details"
+send -- "yes\r"
+expect "Enter pass phrase"
+send -- "$env(CA_PASSPHRASE)\r"
+expect eof
