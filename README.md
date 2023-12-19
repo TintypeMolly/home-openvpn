@@ -1,8 +1,10 @@
 ## Reference
 
+Refer to the official Ubuntu documentation for OpenVPN installation.
+
 https://ubuntu.com/server/docs/service-openvpn
 
-## Need to be done in host computer
+## Configuration on Host Computer
 
 Edit `/etc/sysctl.conf`` and uncomment the following line to enable IP forwarding.
 
@@ -30,8 +32,10 @@ sudo sysctl -p /etc/sysctl.conf
 
 ## Create Client Config
 
+Generate a client configuration for your VPN client by running the following command:
+
 ```sh
 ./create-client.sh -c myclient -r hostname.of.vpnserver
 ```
 
-It generates `myclient.ovpn` config file.
+This will create the `myclient.ovpn` configuration file.
