@@ -6,7 +6,7 @@ https://ubuntu.com/server/docs/service-openvpn
 
 ## Configuration on Host Computer
 
-Edit `/etc/sysctl.conf`` and uncomment the following line to enable IP forwarding.
+Edit `/etc/sysctl.conf` and uncomment the following line to enable IP forwarding.
 
 ```conf
 #net.ipv4.ip_forward=1
