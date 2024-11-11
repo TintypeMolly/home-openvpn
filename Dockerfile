@@ -1,4 +1,4 @@
-FROM ubuntu:jammy
+FROM ubuntu:noble
 
 ARG CA_PASSPHRASE
 ARG OVPN_SERVERNAME
